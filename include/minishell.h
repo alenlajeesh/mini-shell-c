@@ -13,7 +13,8 @@
 char *read_input(void);
 char **parse_input(char *line);
 void execute_command(char *line);
-
+char **split_pipe(char *line, int *count);
+void execute_pipes(char *line);
 int is_builtin(char *cmd);
 int exec_builtin(char **args);
 

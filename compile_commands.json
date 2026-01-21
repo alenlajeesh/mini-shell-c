@@ -1,0 +1,34 @@
+[
+  {
+    "file": "src/parser.c",
+    "arguments": [
+      "gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "src/parser.c",
+      "-o",
+      "src/parser.o"
+    ],
+    "directory": "/home/alenlajeesh/Kalvium/mini-shell-c",
+    "output": "src/parser.o"
+  },
+  {
+    "file": "src/execute.c",
+    "arguments": [
+      "gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "src/execute.c",
+      "-o",
+      "src/execute.o"
+    ],
+    "directory": "/home/alenlajeesh/Kalvium/mini-shell-c",
+    "output": "src/execute.o"
+  }
+]
