@@ -16,7 +16,7 @@
     "output": "src/parser.o"
   },
   {
-    "file": "src/execute.c",
+    "file": "src/redirect.c",
     "arguments": [
       "gcc",
       "-Wall",
@@ -24,11 +24,11 @@
       "-Werror",
       "-Iinclude",
       "-c",
-      "src/execute.c",
+      "src/redirect.c",
       "-o",
-      "src/execute.o"
+      "src/redirect.o"
     ],
     "directory": "/home/alenlajeesh/Kalvium/mini-shell-c",
-    "output": "src/execute.o"
+    "output": "src/redirect.o"
   }
 ]

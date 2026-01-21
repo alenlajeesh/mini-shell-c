@@ -13,7 +13,10 @@ SRC = \
 	src/input.c \
 	src/parser.c \
 	src/execute.c \
-	src/builtins.c
+	src/builtins.c \
+	src/redirect.c  \
+	src/signals.c \
+	src/pipe.c 
 
 # Object files
 OBJ = $(SRC:.c=.o)

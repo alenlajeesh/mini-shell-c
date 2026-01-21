@@ -1,17 +1,32 @@
 #include "minishell.h"
 
-int main(void){
-	char *line;
-	
-	while(1){
-		line=read_input();
+static void setup_signals(void)
+{
+    struct sigaction sa;
 
-		if(!line){
-			break;
-		}
+    sa.sa_handler = sigint_handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;   // IMPORTANT
 
-		execute_command(line);
-		free(line);
-	}
-	return 0;
+    sigaction(SIGINT, &sa, NULL);
+    signal(SIGQUIT, SIG_IGN);
 }
+
+int main(void)
+{
+    char *line;
+
+    setup_signals();
+
+    while (1)
+    {
+        line = read_input();
+        if (!line)
+            break;
+
+        execute_command(line);
+        free(line);
+    }
+    return 0;
+}
+
